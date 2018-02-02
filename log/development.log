@@ -5081,3 +5081,569 @@ Processing by ProductsController#index as XML
 Completed 200 OK in 267ms (Views: 204.4ms | ActiveRecord: 43.1ms)
 
 
+Started POST "/users" for 127.0.0.1 at 2018-01-30 18:30:52 -0600
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"el guapo", "email"=>"elguapo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "el guapo"], ["email", "elguapo@gmail.com"], ["password_digest", "$2a$10$AXhbVkfH5nFpKneTKHgzIOBMqHmCWoMIDkkubuQlceEYjfUoSxFju"], ["created_at", "2018-01-31 00:30:53.390681"], ["updated_at", "2018-01-31 00:30:53.390681"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 200ms (Views: 0.6ms | ActiveRecord: 20.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-30 18:34:07 -0600
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"Cesar", "email"=>"cesar@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cesar"], ["email", "cesar@gmail.com"], ["password_digest", "$2a$10$mnKlJ77/f8v133.CasJB2uZRILpN9Ts9M8vNn2lkDPoAmpr6RYFQS"], ["created_at", "2018-01-31 00:34:07.288041"], ["updated_at", "2018-01-31 00:34:07.288041"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 151ms (Views: 0.5ms | ActiveRecord: 20.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-30 18:36:01 -0600
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"maria", "email"=>"maria@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "maria"], ["email", "maria@gmail.com"], ["password_digest", "$2a$10$ZuBbMPQwQkEDGJUCUKjZB.nwuxmcp2WW5oyfG8Y5/fj.dN1AzE8aq"], ["created_at", "2018-01-31 00:36:01.293145"], ["updated_at", "2018-01-31 00:36:01.293145"]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 125ms (Views: 0.5ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-30 18:36:32 -0600
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"a", "email"=>"a@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "a"], ["email", "a@gmail.com"], ["password_digest", "$2a$10$OWALCdRR9Fvb4s92.ZdmsOG3x1OiqHC5VCkgBfHIQFq/6wLRc7rLy"], ["created_at", "2018-01-31 00:36:32.475303"], ["updated_at", "2018-01-31 00:36:32.475303"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 121ms (Views: 0.5ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/user_token" for 127.0.0.1 at 2018-01-30 18:50:15 -0600
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserTokenController#create as XML
+  Parameters: {"auth"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@gmail.com"], ["LIMIT", 1]]
+Completed 201 Created in 173ms (Views: 0.6ms | ActiveRecord: 14.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-30 18:54:45 -0600
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"b", "email"=>"b@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "b"], ["email", "b@gmail.com"], ["password_digest", "$2a$10$xeuipW2GORQDUYOUPMsoR.VTKi4SQ4oL6FzM9gvo5XLE0AsTCZVLe"], ["created_at", "2018-01-31 00:54:45.258617"], ["updated_at", "2018-01-31 00:54:45.258617"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 163ms (Views: 0.6ms | ActiveRecord: 28.0ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5851412030287202400)[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20180131013956)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.5ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "user_id" integer, "product_id" integer, "quantity" integer, "subtotal" decimal(11,2), "tax" decimal(11,2), "total" decimal(11,2), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180131013956"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5851412030287202400)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (2.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "product_id", "quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["product_id", 110], ["quantity", 2], ["created_at", "2018-01-31 02:45:30.874090"], ["updated_at", "2018-01-31 02:45:30.874090"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrder Load (2.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  [1m[36mOrder Load (2.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  [1m[36mOrder Load (2.6ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  [1m[36mOrder Load (1.8ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/orders" for 127.0.0.1 at 2018-01-30 20:50:34 -0600
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#index as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template orders/index.json.jbuilder, application/index.json.jbuilder with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/u/Actualize/minicapstone-app/app/views"
+):
+  
+app/controllers/orders_controller.rb:4:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-01-30 20:50:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.4/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.4/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.11.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.11.0/lib/puma/server.rb:624:in `handle_request'
+vendor/bundle/gems/puma-3.11.0/lib/puma/server.rb:438:in `process_client'
+vendor/bundle/gems/puma-3.11.0/lib/puma/server.rb:302:in `block in run'
+vendor/bundle/gems/puma-3.11.0/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/orders" for 127.0.0.1 at 2018-01-30 21:19:40 -0600
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#index as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template orders/index.json.jbuilder, application/index.json.jbuilder with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/u/Actualize/minicapstone-app/app/views"
+):
+  
+app/controllers/orders_controller.rb:4:in `index'
+Started GET "/orders/1" for 127.0.0.1 at 2018-01-30 21:21:10 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/orders/1"):
+  
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.4/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.4/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.11.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.11.0/lib/puma/server.rb:624:in `handle_request'
+vendor/bundle/gems/puma-3.11.0/lib/puma/server.rb:438:in `process_client'
+vendor/bundle/gems/puma-3.11.0/lib/puma/server.rb:302:in `block in run'
+vendor/bundle/gems/puma-3.11.0/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/orders" for 127.0.0.1 at 2018-01-30 21:23:25 -0600
+Processing by OrdersController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template orders/index.json.jbuilder, application/index.json.jbuilder with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/u/Actualize/minicapstone-app/app/views"
+):
+  
+app/controllers/orders_controller.rb:4:in `index'
+Started GET "/orders" for 127.0.0.1 at 2018-01-30 21:30:59 -0600
+Processing by OrdersController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template orders/index.json.jbuilder, application/index.json.jbuilder with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/u/Actualize/minicapstone-app/app/views"
+):
+  
+app/controllers/orders_controller.rb:5:in `index'
+Started GET "/orders" for 127.0.0.1 at 2018-01-30 21:34:25 -0600
+Processing by OrdersController#index as HTML
+  Rendering orders/index.json.jbuilder
+  [1m[36mOrder Load (1.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  Rendered orders/_order.json.jbuilder (118.7ms)
+  Rendered orders/index.json.jbuilder (200.4ms)
+Completed 200 OK in 204ms (Views: 164.7ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-01-30 21:42:50 -0600
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as XML
+  Rendering products/index.json.jbuilder
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mSupplier Load (4.3ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (135.0ms)
+  [1m[36mSupplier Load (2.1ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (8.0ms)
+  [1m[36mSupplier Load (2.2ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (7.8ms)
+  [1m[36mSupplier Load (2.5ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (8.0ms)
+  [1m[36mImage Load (3.5ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 110]]
+  [1m[36mImage Load (1.7ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 111]]
+  [1m[36mImage Load (1.7ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 112]]
+  [1m[36mImage Load (1.8ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 113]]
+  Rendered products/index.json.jbuilder (282.0ms)
+Completed 200 OK in 319ms (Views: 224.3ms | ActiveRecord: 72.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-30 22:40:53 -0600
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#index as XML
+  Rendering orders/index.json.jbuilder
+  [1m[36mOrder Load (5.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (4.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  Rendered orders/_order.json.jbuilder (142.0ms)
+  Rendered orders/index.json.jbuilder (202.0ms)
+Completed 200 OK in 234ms (Views: 174.0ms | ActiveRecord: 43.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-30 22:43:44 -0600
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"charlie", "email"=>"charlie@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "charlie"], ["email", "charlie@gmail.com"], ["password_digest", "$2a$10$UI5CxMevWnHCPtfQdvLCcOOBQ.vytBqJmQ5lPL6y4M/g3uE3421du"], ["created_at", "2018-01-31 04:43:45.094104"], ["updated_at", "2018-01-31 04:43:45.094104"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 156ms (Views: 0.6ms | ActiveRecord: 22.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-30 22:46:40 -0600
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"bob", "email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "bob"], ["email", "bob@gmail.com"], ["password_digest", "$2a$10$OhuoaZFrhMtSlPvLWvYj1OeusG5blRhX8n5llhLPIaCotCSCfamdm"], ["created_at", "2018-01-31 04:46:41.032835"], ["updated_at", "2018-01-31 04:46:41.032835"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 122ms (Views: 0.5ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-30 22:49:51 -0600
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"jhon", "email"=>"jhon@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "jhon"], ["email", "jhon@gmail.com"], ["password_digest", "$2a$10$etEo7LdHKxV2aLvgEEsmX.iYc13hCKHT.8enoB1RZq2GLr4h1eopm"], ["created_at", "2018-01-31 04:49:51.832000"], ["updated_at", "2018-01-31 04:49:51.832000"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 123ms (Views: 0.5ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-30 22:51:44 -0600
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"josh", "email"=>"josh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "josh"], ["email", "josh@gmail.com"], ["password_digest", "$2a$10$X.aj.DlR0YdPoGFJryVmnOlqH/DOc3XLVjPj2xRIBAhJFQVyDIHyq"], ["created_at", "2018-01-31 04:51:44.913282"], ["updated_at", "2018-01-31 04:51:44.913282"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 122ms (Views: 0.5ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-30 22:53:53 -0600
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"hi", "email"=>"hi@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "hi"], ["email", "hi@gmail.com"], ["password_digest", "$2a$10$frIyY7uXztj2FlUa.2knsOvN.xlG3Yneq9.5n6VcgE3oRjKZiNfqm"], ["created_at", "2018-01-31 04:53:53.253935"], ["updated_at", "2018-01-31 04:53:53.253935"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 123ms (Views: 0.5ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-01-30 22:57:34 -0600
+Processing by ProductsController#create as XML
+  Parameters: {"name"=>"glass", "price"=>"100000", "image_url"=>"https://i5.walmartimages.com/asr/e248f9bb-5a6f-48bc-b62b-ad487e8c243f_1.d03259ff5bd0d122072cd6f8eda2c3cf.jpeg", "description"=>"glass aaaaaaaaaa", "in_stock"=>"true"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image_url' for Product.):
+  
+app/controllers/products_controller.rb:23:in `create'
+Started GET "/products" for 127.0.0.1 at 2018-01-30 23:25:31 -0600
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as XML
+  Rendering products/index.json.jbuilder
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mSupplier Load (4.1ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (120.5ms)
+  [1m[36mSupplier Load (1.0ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (6.7ms)
+  [1m[36mSupplier Load (1.1ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (6.6ms)
+  [1m[36mSupplier Load (1.1ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (6.5ms)
+  [1m[36mImage Load (1.9ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 110]]
+  [1m[36mImage Load (0.8ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 111]]
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 112]]
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 113]]
+  Rendered products/index.json.jbuilder (243.3ms)
+Completed 200 OK in 280ms (Views: 218.0ms | ActiveRecord: 39.8ms)
+
+
+Started GET "/products/110" for 127.0.0.1 at 2018-01-30 23:25:44 -0600
+Processing by ProductsController#show as XML
+  Parameters: {"id"=>"110"}
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  Rendering products/show.json.jbuilder
+  [1m[36mSupplier Load (1.1ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (9.1ms)
+  [1m[36mImage Load (1.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 110]]
+  Rendered products/show.json.jbuilder (22.0ms)
+Completed 200 OK in 82ms (Views: 29.4ms | ActiveRecord: 23.8ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-01-30 23:27:13 -0600
+Processing by ProductsController#create as XML
+  Parameters: {"name"=>"plastic", "price"=>"400", "image_url"=>"https://i5.walmartimages.com/asr/e248f9bb-5a6f-48bc-b62b-ad487e8c243f_1.d03259ff5bd0d122072cd6f8eda2c3cf.jpeg", "description"=>"glass of plastic", "in_stock"=>"true", "supplier_id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image_url' for Product.):
+  
+app/controllers/products_controller.rb:23:in `create'
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users" for 127.0.0.1 at 2018-01-30 23:46:04 -0600
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as XML
+  Parameters: {"name"=>"guapo", "email"=>"guapo@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "guapo"], ["email", "guapo@g.com"], ["password_digest", "$2a$10$Tx6J.Ch9sfcGswUQj0YLkOjP2YNVFCzdmOfTbE22PdtCgjiSM6Lp."], ["created_at", "2018-01-31 05:46:05.212913"], ["updated_at", "2018-01-31 05:46:05.212913"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 170ms (Views: 0.7ms | ActiveRecord: 21.2ms)
+
+
+Started POST "/user_token" for 127.0.0.1 at 2018-01-30 23:46:27 -0600
+Processing by UserTokenController#create as XML
+  Parameters: {"auth"=>{"email"=>"guapo@g.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "guapo@g.com"], ["LIMIT", 1]]
+Completed 201 Created in 185ms (Views: 0.5ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-30 23:46:33 -0600
+Processing by OrdersController#index as XML
+  Rendering orders/index.json.jbuilder
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  Rendered orders/_order.json.jbuilder (71.3ms)
+  Rendered orders/index.json.jbuilder (139.6ms)
+Completed 200 OK in 169ms (Views: 129.8ms | ActiveRecord: 25.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-01-30 23:46:39 -0600
+Processing by ProductsController#index as XML
+  Rendering products/index.json.jbuilder
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mSupplier Load (1.4ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (79.8ms)
+  [1m[36mSupplier Load (1.0ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (6.7ms)
+  [1m[36mSupplier Load (1.1ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (6.8ms)
+  [1m[36mCACHE Supplier Load (0.1ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (5.2ms)
+  [1m[36mImage Load (1.2ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 110]]
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 111]]
+  [1m[36mImage Load (0.9ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 112]]
+  [1m[36mImage Load (1.0ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 113]]
+  Rendered products/index.json.jbuilder (164.4ms)
+Completed 200 OK in 175ms (Views: 149.8ms | ActiveRecord: 24.2ms)
+
+
+Started GET "/products/110" for 127.0.0.1 at 2018-01-30 23:46:49 -0600
+Processing by ProductsController#show as XML
+  Parameters: {"id"=>"110"}
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  Rendering products/show.json.jbuilder
+  [1m[36mSupplier Load (1.8ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (8.8ms)
+  [1m[36mImage Load (1.3ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 110]]
+  Rendered products/show.json.jbuilder (26.1ms)
+Completed 200 OK in 47ms (Views: 34.6ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2018-01-30 23:46:55 -0600
+Processing by OrdersController#create as XML
+  Parameters: {"quantity"=>"3", "product_id"=>"110"}
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 4.1ms)
+
+
+  
+NameError (uninitialized constant UserId):
+  
+app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Susanne Summers"], ["email", "sue@gmail.com"], ["password_digest", "$2a$10$qoFTFZ4w/FYuz58Kqkd9Q.CGTE4bCx/IAOMU9.4zRoiuwpV18Ze72"], ["created_at", "2018-02-01 00:49:02.444265"], ["updated_at", "2018-02-01 00:49:02.444265"]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5851412030287202400)[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminToUsers (20180201005131)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.1ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180201005131"]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5851412030287202400)[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "admin" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2018-02-01 00:54:58.918311"], ["admin", "t"], ["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/products" for 127.0.0.1 at 2018-01-31 19:19:55 -0600
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/u/Actualize/minicapstone-app/app/controllers/products_controller.rb:38: syntax error, unexpected ',', expecting =>
+      render json: {message, "you are not authorized"}, s...
+                           ^
+/home/u/Actualize/minicapstone-app/app/controllers/products_controller.rb:38: syntax error, unexpected '}', expecting keyword_end
+...sage, "you are not authorized"}, status: :unauthorized
+...                              ^):
+  
+app/controllers/products_controller.rb:38: syntax error, unexpected ',', expecting =>
+app/controllers/products_controller.rb:38: syntax error, unexpected '}', expecting keyword_end
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5851412030287202400)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20180201032732)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180201032732"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategoryProducts (20180201032813)
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "category_products" ("id" bigserial primary key, "category_id" integer, "product_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180201032813"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5851412030287202400)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5851412030287202400)[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5851412030287202400)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCategory Load (2.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProduct Load (4.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCategoryProduct Load (4.3ms)[0m  [1m[34mSELECT  "category_products".* FROM "category_products" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "wood"], ["created_at", "2018-02-02 00:30:39.512830"], ["updated_at", "2018-02-02 00:30:39.512830"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "glass"], ["created_at", "2018-02-02 00:30:39.522443"], ["updated_at", "2018-02-02 00:30:39.522443"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "stone"], ["created_at", "2018-02-02 00:30:39.530434"], ["updated_at", "2018-02-02 00:30:39.530434"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "wood"], ["created_at", "2018-02-02 00:31:15.072210"], ["updated_at", "2018-02-02 00:31:15.072210"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "glass"], ["created_at", "2018-02-02 00:31:15.083445"], ["updated_at", "2018-02-02 00:31:15.083445"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "stone"], ["created_at", "2018-02-02 00:31:15.091884"], ["updated_at", "2018-02-02 00:31:15.091884"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "category_products" ("category_id", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["category_id", 1], ["product_id", 110], ["created_at", "2018-02-02 00:31:15.225504"], ["updated_at", "2018-02-02 00:31:15.225504"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 111], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "category_products" ("category_id", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["category_id", 2], ["product_id", 111], ["created_at", "2018-02-02 00:31:15.244632"], ["updated_at", "2018-02-02 00:31:15.244632"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "category_products" ("category_id", "product_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["category_id", 3], ["product_id", 110], ["created_at", "2018-02-02 00:31:15.260834"], ["updated_at", "2018-02-02 00:31:15.260834"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCategoryProduct Load (1.7ms)[0m  [1m[34mSELECT  "category_products".* FROM "category_products" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategoryProduct Load (1.7ms)[0m  [1m[34mSELECT  "category_products".* FROM "category_products" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCategoryProduct Load (0.8ms)[0m  [1m[34mSELECT  "category_products".* FROM "category_products" WHERE "category_products"."category_id" = $1 LIMIT $2[0m  [["category_id", 1], ["LIMIT", 11]]
+  [1m[36mCategoryProduct Load (1.8ms)[0m  [1m[34mSELECT  "category_products".* FROM "category_products" WHERE "category_products"."category_id" = $1 LIMIT $2[0m  [["category_id", 1], ["LIMIT", 11]]
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" INNER JOIN "category_products" ON "products"."id" = "category_products"."product_id" WHERE "category_products"."category_id" = $1 LIMIT $2[0m  [["category_id", 1], ["LIMIT", 11]]
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (3.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" INNER JOIN "category_products" ON "products"."id" = "category_products"."product_id" WHERE "category_products"."category_id" = $1 LIMIT $2[0m  [["category_id", 1], ["LIMIT", 11]]
+Started GET "/products?category=woo" for 127.0.0.1 at 2018-02-01 19:25:03 -0600
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as XML
+  Parameters: {"category"=>"woo"}
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "woo"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 6.1ms)
+
+
+  
+NoMethodError (undefined method `products' for nil:NilClass):
+  
+app/controllers/products_controller.rb:24:in `index'
+Started GET "/products?category=wood" for 127.0.0.1 at 2018-02-01 19:25:15 -0600
+Processing by ProductsController#index as XML
+  Parameters: {"category"=>"wood"}
+  [1m[36mCategory Load (3.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT $2[0m  [["name", "wood"], ["LIMIT", 1]]
+  Rendering products/index.json.jbuilder
+  [1m[36mProduct Load (3.5ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "category_products" ON "products"."id" = "category_products"."product_id" WHERE "category_products"."category_id" = $1[0m  [["category_id", 1]]
+  [1m[36mSupplier Load (3.5ms)[0m  [1m[34mSELECT  "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered products/_product.json.jbuilder (87.0ms)
+  [1m[36mImage Load (3.1ms)[0m  [1m[34mSELECT "images".* FROM "images" WHERE "images"."product_id" = $1[0m  [["product_id", 110]]
+  Rendered products/index.json.jbuilder (222.7ms)
+Completed 200 OK in 344ms (Views: 193.8ms | ActiveRecord: 79.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-02-01 19:31:19 -0600
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.json.jbuilder
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.json.jbuilder (38.1ms)
+Completed 200 OK in 60ms (Views: 35.6ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-02-01 19:31:34 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+vendor/bundle/gems/railties-5.1.4/lib/rails/rack/logger.rb:36:in `call_app'
+vendor/bundle/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `block in call'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/tagged_logging.rb:69:in `tagged'
+vendor/bundle/gems/railties-5.1.4/lib/rails/rack/logger.rb:24:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/request_id.rb:25:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/gems/activesupport-5.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/executor.rb:12:in `call'
+vendor/bundle/gems/actionpack-5.1.4/lib/action_dispatch/middleware/static.rb:125:in `call'
+vendor/bundle/gems/rack-2.0.3/lib/rack/sendfile.rb:111:in `call'
+vendor/bundle/gems/railties-5.1.4/lib/rails/engine.rb:522:in `call'
+vendor/bundle/gems/puma-3.11.0/lib/puma/configuration.rb:225:in `call'
+vendor/bundle/gems/puma-3.11.0/lib/puma/server.rb:624:in `handle_request'
+vendor/bundle/gems/puma-3.11.0/lib/puma/server.rb:438:in `process_client'
+vendor/bundle/gems/puma-3.11.0/lib/puma/server.rb:302:in `block in run'
+vendor/bundle/gems/puma-3.11.0/lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5851412030287202400)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCartedProducts (20180202025319)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (35.7ms)[0m  [1m[35mCREATE TABLE "carted_products" ("id" bigserial primary key, "user_id" integer, "product_id" integer, "quantity" integer, "status" character varying, "order_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180202025319"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5851412030287202400)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

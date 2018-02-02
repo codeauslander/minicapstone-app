@@ -26,7 +26,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'rack-cors''
 gem 'paint'
 gem 'seed_dump'
-
+gem 'knock'
 gem 'tty-table'
 
 
